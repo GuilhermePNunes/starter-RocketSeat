@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <h3>
+        Abra no navegador, coloque no modo inspeção, em console.
+        </h3>
+        <h6>
+            5º exercício
+<br>Dado o seguinte vetor de objetos:
+<br>var usuarios = [
+<br>{
+    <br>nome: "Diego",
+    <br>habilidades: ["Javascript", "ReactJS", "Redux"]
+    <br>},
+    <br>{
+        <br>nome: "Gabriel",
+        <br>habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        <br>}
+        <br>];
+        </h6>
+        <script>
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ]
+            for (const valor of usuarios) {
+                console.log("O " + valor.nome + " possui as habiidades: " +valor.habilidades.join(', '));
+            }
+        </script>
+    </body>
+</html>

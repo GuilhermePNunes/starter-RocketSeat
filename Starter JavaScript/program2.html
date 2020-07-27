@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <h3>
+        Abra no navegador, coloque no modo inspeção, em console.
+        </h3>
+        <h6>
+            2º exercício
+            <br>Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
+            <br>function pares(x, y) {
+            <br>// código aqui
+            <br>}
+            <br><br>pares(32, 321);
+
+        </h6>
+        <script>
+            function pares (x, y) {
+                var par=0
+                if(x > y){
+                    for(var i = y; i <= x; i++){
+                        if(i %2==0){
+                            par++;
+                        console.log("pares = " + i);
+                        }
+                    }
+                }
+                if(x < y){
+                    for(var i = x; i <= y; i++){
+                        if(i %2==0){
+                            par++;
+                        console.log("pares = " + i);
+                        }
+                    }
+                }
+            }
+
+            var x = prompt("Digite o número X");
+            var y = prompt("Digite o número Y");
+
+            pares(x, y);
+           
+        </script>
+    </body>
+</html>
