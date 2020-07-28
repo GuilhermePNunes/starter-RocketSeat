@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <h3>
+        Abra no navegador, coloque no modo inspeção, em console.
+        </h3>
+        <h6>
+            <div id="app">
+                <button onclick="mostraAlerta()">Me pressione</button>
+                <input type="text" name="nome" id="nome" class="nome">
+                <button class="botao">adicionar</button>
+                <button class="botao2">Botao 2</button>
+            </div>
+        </h6>
+        <script>
+            function mostraAlerta(){
+                alert('Botão foi clicado');
+            }
+
+            //var inputElement = document.getElementById('nome');
+            //var inputElement = document.getElementsByName('nome');
+            //var inputElement = document.getElementsByClassName('nome');
+            //var inputElement = document.getElementsByTagName('nome');
+            var inputElement = document.querySelector(' div#app input');
+            //existem várias formas para utilizar o querySelector, ele sempre passará o primeiro elemento
+            //querySelector retorna uma única vez, a não ser que seja usado o 'querySelectorAll'
+            //EXEMPLO var inputElement = document.querySelector('input[name=nome]');
+
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function(){
+                var texto = inputElement.value;
+                alert(texto);
+            //    alert('botão clicado'); //faz a mesma coisa que o uso do onclick na arvore de elementos
+            }
+            
+            //criando elementos no html com o JS
+
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href', 'https://github.com/GuilhermePNunes');
+            linkElement.setAttribute('title', 'Guilherme Github');
+            
+            
+            var textElement = document.createTextNode('Acessar meu Github');
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            //para remover o botao referenciado com o querySelector
+            var buttonElement = document.querySelector('.botao2');
+            containerElement.removeChild(buttonElement);
+            
+            //console.log(inputElement);
+        </script>
+    </body>
+</html>
