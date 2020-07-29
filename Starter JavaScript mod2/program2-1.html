@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <h3>
+        Abra no navegador, coloque no modo inspeção, em console.
+        </h3>
+        <h6>
+            1º exercício
+        <br>Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+        vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+        aparecer na tela.
+        </h6>
+        <div id="app">
+        <!--<button onclick="criaBoxVermelha()">Cria quadrado</button>   outra forma de resolver-->
+        </div>
+        <script>
+            /*function criaBoxVermelha(){  //outra forma de resolver
+
+                var box = document.createElement('div');
+                box.setAttribute('class', 'box')
+                box.setAttribute('onmouseover', 'mudaCor(event)')
+
+                var containerElement = document.querySelector('#App')
+
+
+                containerElement.appendChild(box);
+
+                box.style.width = 100 + "px";
+                box.style.height = 100 + "px";
+                box.style.marginBottom = 10 + "px";
+                box.style.backgroundColor = 'red';
+
+                console.log(box)
+                }*/
+
+            var criaDiv = document.createElement('div');
+            criaDiv.setAttribute('class', 'divv');
+
+            var criaCoisa = document.createElement('button');
+            criaCoisa.setAttribute('title', 'Botao Faz Caixa');
+            criaCoisa.setAttribute('onclick', 'vaiRedBox()');
+            
+            var mostraTexto = document.createTextNode("Cria Caixa Vermelha");
+            criaCoisa.appendChild(mostraTexto);
+
+            var abreContainer = document.querySelector('#app');
+            abreContainer.appendChild(criaCoisa);
+
+
+            var abreContainer2 = document.querySelector('#app');
+            abreContainer2.appendChild(criaDiv);
+
+            function vaiRedBox() {
+                var caixa = document.createElement('p');
+
+                caixa.style.height = '100';
+                caixa.style.width = '100';
+                caixa.style.backgroundColor = '#f00';
+                caixa.style.float = 'right';
+                caixa.style.margin = '5';
+                abreContainer2.appendChild(caixa);
+                }
+
+
+        </script>
+    </body>
+</html>
