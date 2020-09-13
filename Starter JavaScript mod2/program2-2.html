@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <h3>
+        Abra no navegador, coloque no modo inspeção, em console.
+        </h3>
+        <h6>
+            2º exercício
+            <br>Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+            algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+            <br><br>function getRandomColor() {
+            <br>var letters = "0123456789ABCDEF";
+            <br>var color = "#";
+            <br>for (var i = 0; i < 6; i++) {
+                <br>color += letters[Math.floor(Math.random() * 16)];
+                <br>}
+                <br>return color;
+                <br>}
+            <br><br>var newColor = getRandomColor(); // #E943F0
+        </h6>
+        <div id="app">
+            <!--<button onclick="criaBoxVermelha()">Cria quadrado</button>   outra forma de resolver-->
+            </div>
+        <script>
+            var criaDiv = document.createElement('div');
+            criaDiv.setAttribute('class', 'divv');
+
+            var criaCoisa = document.createElement('button');
+            criaCoisa.setAttribute('title', 'Botao Faz Caixa');
+            criaCoisa.setAttribute('onclick', 'vaiRedBox()');
+            
+            var mostraTexto = document.createTextNode("Cria Caixa Vermelha");
+            criaCoisa.appendChild(mostraTexto);
+
+            var abreContainer = document.querySelector('#app');
+            abreContainer.appendChild(criaCoisa);
+
+
+            var abreContainer2 = document.querySelector('#app');
+            abreContainer2.appendChild(criaDiv);
+
+            function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+            }
+            
+            var newColor = getRandomColor(); // #E943F0
+
+            function vaiRedBox() {
+                var caixa = document.createElement('div');
+                caixa.setAttribute('onmouseover', 'prompt');
+
+                caixa.style.height = '100';
+                caixa.style.width = '100';
+                caixa.style.backgroundColor = '#f00';
+                caixa.style.float = 'right';
+                caixa.style.margin = '5';
+                abreContainer2.appendChild(caixa);
+                }
+
+
+           
+        
+        </script>
+    </body>
+</html>
